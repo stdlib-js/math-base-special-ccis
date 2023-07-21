@@ -52,6 +52,11 @@ The [cis][cis] function is defined as
 ## Usage
 
 ```javascript
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ccis/tags). For example,
+
+```javascript
 import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.0.6-esm/index.mjs';
 ```
 
@@ -105,7 +110,7 @@ im = imag( v );
 
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.0.6-esm/index.mjs';
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@esm/index.mjs';
 
 var z1;
 var z2;
