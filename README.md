@@ -18,13 +18,13 @@ limitations under the License.
 
 -->
 
-# cis
+# ccis
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the [cis][cis] function of a complex number.
+> Evaluate the [cis][cis] function for a double-precision complex floating-point number.
 
-<section class="intro"> 
+<section class="intro">
 
 The [cis][cis] function is defined as
 
@@ -45,40 +45,62 @@ The [cis][cis] function is defined as
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-ccis
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@esm/index.mjs';
+var ccis = require( '@stdlib/math-base-special-ccis' );
 ```
 
-#### cis( \[out,] re, im )
+#### ccis( z )
 
-Evaluates the [cis][cis] function with a `complex` argument comprised of a **real** component `re` and an **imaginary** component `im`.
-
-```javascript
-var v = cis( 0.0, 0.0 );
-// returns [ 1.0, 0.0 ]
-
-v = cis( 1.0, 0.0 );
-// returns [ ~0.540, ~0.841 ]
-```
-
-By default, the function returns real and imaginary components as a two-element `array`. To avoid unnecessary memory allocation, the function supports providing an output (destination) object.
+Evaluates the [cis][cis] function for a double-precision complex floating-point number.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Complex128 = require( '@stdlib/complex-float64' );
+var real = require( '@stdlib/complex-real' );
+var imag = require( '@stdlib/complex-imag' );
 
-var out = new Float64Array( 2 );
+var z = new Complex128( 0.0, 0.0 );
 
-var v = cis( out, 1.0, 0.0 );
-// returns <Float64Array>[ ~0.540, ~0.841 ]
+var v = ccis( z );
+// returns <Complex128>
 
-var bool = ( v === out );
-// returns true
+var re = real( v );
+// returns 1.0
+
+var im = imag( v );
+// returns 0.0
+
+z = new Complex128( 1.0, 0.0 );
+
+v = ccis( z );
+// returns <Complex128>
+
+re = real( v );
+// returns ~0.540
+
+im = imag( v );
+// returns ~0.841
 ```
 
 </section>
@@ -91,45 +113,136 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
+```javascript
+var Complex128 = require( '@stdlib/complex-float64' );
+var uniform = require( '@stdlib/random-base-uniform' );
+var ccis = require( '@stdlib/math-base-special-ccis' );
 
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
-import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imag@esm/index.mjs';
-import cis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@esm/index.mjs';
-
-var re;
-var im;
 var z1;
 var z2;
-var o;
 var i;
 
 for ( i = 0; i < 100; i++ ) {
-    re = round( randu()*100.0 ) - 50.0;
-    im = round( randu()*100.0 ) - 50.0;
-    z1 = new Complex128( re, im );
-
-    o = cis( [ 0.0, 0.0 ], real(z1), imag(z1) );
-    z2 = new Complex128( o[ 0 ], o[ 1 ] );
-
-    console.log( 'cis(%s) = %s', z1.toString(), z2.toString() );
+    z1 = new Complex128( uniform( -50.0, 50.0 ), uniform( -50.0, 50.0 ) );
+    z2 = ccis( z1 );
+    console.log( 'ccis(%s) = %s', z1.toString(), z2.toString() );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/ccis.h"
+```
+
+#### stdlib_base_ccis( z )
+
+Evaluates the [cis][cis] function for a double-precision complex floating-point number.
+
+```c
+#include "stdlib/complex/float64.h"
+#include "stdlib/complex/real.h"
+#include "stdlib/complex/imag.h"
+
+stdlib_complex128_t z = stdlib_complex128( 0.0, 0.0 );
+
+stdlib_complex128_t out = stdlib_base_ccis( z );
+
+double re = stdlib_real( out );
+// returns 1.0
+
+double im = stdlib_imag( out );
+// returns 0.0
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] stdlib_complex128_t` input value.
+
+```c
+stdlib_complex128_t stdlib_base_ccis( const stdlib_complex128_t z );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/ccis.h"
+#include "stdlib/complex/float64.h"
+#include "stdlib/complex/reim.h"
+#include <stdio.h>
+
+int main() {
+    const stdlib_complex128_t x[] = {
+        stdlib_complex128( 3.14, 1.5 ),
+        stdlib_complex128( -3.14, 1.5 ),
+        stdlib_complex128( 0.0, -0.0 ),
+        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+    };
+
+    stdlib_complex128_t v;
+    stdlib_complex128_t y;
+    double re;
+    double im;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        stdlib_reim( v, &re, &im );
+        printf( "z = %lf + %lfi\n", re, im );
+
+        y = stdlib_base_ccis( v );
+        stdlib_reim( y, &re, &im );
+        printf( "ccis(z) = %lf + %lfi\n", re, im );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -148,7 +261,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
