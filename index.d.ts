@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,27 +16,22 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var Complex128 = require( '@stdlib/complex-float64' );
-var addon = require( './../src/addon.node' );
-
-
-// MAIN //
+import { Complex128 } from '@stdlib/types/object';
 
 /**
 * Evaluates the cis function for a double-precision complex floating-point number.
 *
-* @private
-* @param {Complex128} z - complex number
-* @returns {Complex128} result
+* @param z - complex number
+* @returns result
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-* var imag = require( '@stdlib/complex-imag' );
+* var Complex128 = require( `@stdlib/complex/float64` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
 *
 * var z = new Complex128( 0.0, 0.0 );
 * // returns <Complex128>
@@ -49,11 +44,10 @@ var addon = require( './../src/addon.node' );
 *
 * var im = imag( out );
 * // returns 0.0
-*
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-* var imag = require( '@stdlib/complex-imag' );
+* var Complex128 = require( `@stdlib/complex/float64` );
+* var real = require( `@stdlib/complex/real` );
+* var imag = require( `@stdlib/complex/imag` );
 *
 * var z = new Complex128( 1.0, 0.0 );
 * // returns <Complex128>
@@ -67,12 +61,9 @@ var addon = require( './../src/addon.node' );
 * var im = imag( out );
 * // returns ~0.841
 */
-function ccis( z ) {
-	var v = addon( z );
-	return new Complex128( v.re, v.im );
-}
+declare function cis( z: Complex128 ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = ccis;
+export = cis;
