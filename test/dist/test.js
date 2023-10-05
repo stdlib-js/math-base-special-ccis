@@ -34,8 +34,8 @@ var ccis = require( './../../dist' );
 
 // FIXTURES //
 
-var pureReal = require( './../..xtures/julia/pure_real.json' );
-var generalComplex = require( './../..xtures/julia/general_complex.json' );
+var pureReal = require( './../fixtures/julia/pure_real.json' );
+var generalComplex = require( './../fixtures/julia/general_complex.json' );
 
 
 // TESTS //
