@@ -63,6 +63,11 @@ The [cis][cis] function is defined as
 ## Usage
 
 ```javascript
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-ccis/tags). For example,
+
+```javascript
 import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.2-deno/mod.js';
 ```
 
@@ -111,7 +116,7 @@ im = imag( v );
 ```javascript
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
-import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.2-deno/mod.js';
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@deno/mod.js';
 
 var z1;
 var z2;
