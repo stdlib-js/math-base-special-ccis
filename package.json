@@ -49,7 +49,7 @@
     "@stdlib/math-base-special-exp": "^0.2.4",
     "@stdlib/math-base-special-sin": "^0.3.0",
     "@stdlib/math-base-special-sincos": "^0.3.0",
-    "@stdlib/types": "^0.3.2",
+    "@stdlib/types": "^0.4.1",
     "@stdlib/utils-library-manifest": "^0.2.2"
   },
   "devDependencies": {
