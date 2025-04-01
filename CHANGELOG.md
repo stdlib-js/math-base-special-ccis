@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-25)
+## Unreleased (2025-04-01)
 
 <section class="reverts">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
 -   [`b72f445`](https://github.com/stdlib-js/stdlib/commit/b72f44598bf4a0bbcf3e5ddba485dbf79e58981f) - **refactor:** replace separate `sin` and `cos` calls with `sincos` [(#6365)](https://github.com/stdlib-js/stdlib/pull/6365) _(by Karan Anand)_
 -   [`27c7679`](https://github.com/stdlib-js/stdlib/commit/27c767906c6b36140a9536cbb00946276eabdb6a) - **chore:** address commit comment [(#5943)](https://github.com/stdlib-js/stdlib/pull/5943) _(by Jalaj Kumar, Athan Reines)_
 -   [`73d8eb8`](https://github.com/stdlib-js/stdlib/commit/73d8eb85e52e10d7928ec64809752baa2b23e4cc) - **bench:** refactor random generation in `math/base/special/ceil*` [(#5834)](https://github.com/stdlib-js/stdlib/pull/5834) _(by Saurabh Singh)_
