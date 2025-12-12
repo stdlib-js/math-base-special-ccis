@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-11-09)
+## Unreleased (2025-12-12)
 
 <section class="reverts">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`512334c`](https://github.com/stdlib-js/stdlib/commit/512334c49e27ddff4e3fa672e1e81ac2c4fbc123) - **docs:** improve doctests for complex number instances in `math/base/special/ccis` [(#9014)](https://github.com/stdlib-js/stdlib/pull/9014) _(by Aryan kumar)_
 -   [`758249e`](https://github.com/stdlib-js/stdlib/commit/758249efdf36b9ffda6686c8b710fc4d141fa273) - **chore:** minor clean-up of example code _(by Philipp Burckhardt)_
 -   [`6d383e8`](https://github.com/stdlib-js/stdlib/commit/6d383e819e2d46409e25a22532e8f368a033b6c4) - **chore:** add structured package data for `math/base/special/ccis` [(#8395)](https://github.com/stdlib-js/stdlib/pull/8395) _(by Pratik, Athan Reines)_
 -   [`2cf7f78`](https://github.com/stdlib-js/stdlib/commit/2cf7f78c164b51a905e7df83c99e0404ac55fe39) - **docs:** correct function names, return values, and method calls in TypeScript declaration examples _(by Philipp Burckhardt)_
@@ -57,8 +58,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 6 people contributed to this release. Thank you to the following contributors:
+A total of 7 people contributed to this release. Thank you to the following contributors:
 
+-   Aryan kumar
 -   Athan Reines
 -   Jalaj Kumar
 -   Karan Anand
