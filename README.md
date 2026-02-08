@@ -63,7 +63,7 @@ The [cis][cis] function is defined as
 ## Usage
 
 ```javascript
-import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@deno/mod.js';
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.3-deno/mod.js';
 ```
 
 #### ccis( z )
@@ -97,7 +97,7 @@ v = ccis( z );
 ```javascript
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
-import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@deno/mod.js';
+import ccis from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.3-deno/mod.js';
 
 var z1;
 var z2;
