@@ -65,7 +65,7 @@ The [cis][cis] function is defined as
 To use in Observable,
 
 ```javascript
-ccis = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@umd/browser.js' )
+ccis = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.3-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -77,7 +77,7 @@ var ccis = require( 'path/to/vendor/umd/math-base-special-ccis/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.3-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -124,7 +124,7 @@ v = ccis( z );
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ccis@v0.2.3-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
