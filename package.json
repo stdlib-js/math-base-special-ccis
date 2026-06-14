@@ -47,7 +47,7 @@
     "@stdlib/math-base-napi-unary": "^0.2.7",
     "@stdlib/math-base-special-exp": "^0.2.5",
     "@stdlib/math-base-special-sincos": "^0.3.1",
-    "@stdlib/types": "^0.4.3",
+    "@stdlib/types": "^0.5.1",
     "@stdlib/utils-library-manifest": "^0.2.4"
   },
   "devDependencies": {
