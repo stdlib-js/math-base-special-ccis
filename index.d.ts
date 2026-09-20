@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
-* Evaluate the cis function for a double-precision complex floating-point number.
+* Evaluates the cis function for a double-precision complex floating-point number.
 *
-* @module @stdlib/math-base-special-ccis
+* @param z - complex number
+* @returns result
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64-ctor' );
-* var ccis = require( '@stdlib/math-base-special-ccis' );
 *
 * var z = new Complex128( 0.0, 0.0 );
 * // returns <Complex128>
@@ -35,7 +39,6 @@
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64-ctor' );
-* var ccis = require( '@stdlib/math-base-special-ccis' );
 *
 * var z = new Complex128( 1.0, 0.0 );
 * // returns <Complex128>
@@ -43,12 +46,9 @@
 * var out = ccis( z );
 * // returns <Complex128>[ ~0.540, ~0.841 ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function ccis( z: Complex128 ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = ccis;
