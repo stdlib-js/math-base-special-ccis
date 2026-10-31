@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-20)
+## Unreleased (2026-10-31)
+
+<section class="features">
+
+### Features
+
+-   [`9e5e372`](https://github.com/stdlib-js/stdlib/commit/9e5e372b8889458ed23cd2625a7ca3593db3fa1b) - add `assign` and `strided` methods to `math/base/special/ccis` [(#16050)](https://github.com/stdlib-js/stdlib/pull/16050)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`9e5e372`](https://github.com/stdlib-js/stdlib/commit/9e5e372b8889458ed23cd2625a7ca3593db3fa1b) - **feat:** add `assign` and `strided` methods to `math/base/special/ccis` [(#16050)](https://github.com/stdlib-js/stdlib/pull/16050) _(by Karan Anand)_
 -   [`1811a32`](https://github.com/stdlib-js/stdlib/commit/1811a325c45b2c540bbcad3f0379453c3b85cfba) - **test:** migrate `math/base/special/ccis` to ULP-based assertions [(#14194)](https://github.com/stdlib-js/stdlib/pull/14194) _(by Philipp Burckhardt)_
 -   [`22102e1`](https://github.com/stdlib-js/stdlib/commit/22102e138f718d8201aeba9d8a14cce6c5fa49a8) - **docs:** improve doctests for complex number instances [(#13840)](https://github.com/stdlib-js/stdlib/pull/13840) _(by fiboNacci1163)_
 -   [`c73c8b3`](https://github.com/stdlib-js/stdlib/commit/c73c8b39bd76529182ea2b3423c6f0feab434774) - **bench:** refactor to use string interpolation in `math/base/special` [(#11387)](https://github.com/stdlib-js/stdlib/pull/11387) _(by Karan Anand)_
